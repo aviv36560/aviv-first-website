@@ -1,0 +1,38 @@
+* {
+  background-color: rgb(218, 212, 205);
+}
+body {
+  display: flex;
+  justify-content: center;
+}
+.mom-title {
+  color: rgb(186, 31, 114);
+  background-color: rgb(214, 183, 207);
+  font-style: italic;
+  border-radius: 10px;
+}
+.main-title {
+  color: rgb(186, 31, 114);
+  font-size: 24px;
+}
+.links {
+  color: black;
+}
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  width: 870px;
+}
+.imagfc {
+  width: 18px;
+  margin-left: 20;
+}
+.imaggit {
+  width: 18px;
+}
+.project {
+  border-radius: 30px;
+  box-shadow: 4px 4px 8px 0px #b7abab;
+  padding: 30px;
+  margin-bottom: 20px;
+}
