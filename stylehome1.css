@@ -8,12 +8,12 @@ body {
 heder {
   width: 100%;
   box-sizing: border-box;
-  background-color: #6c4f5b; /* Dark background */
+  background-color: #6c4f5b; 
   padding: 10px 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Styles for the unordered list */
+
 heder ul {
   list-style-type: none;
   margin: 0;
@@ -21,15 +21,14 @@ heder ul {
   display: flex;
 }
 
-/* Styles for each list item */
+
 heder ul li {
   margin: 0 15px;
 }
 
-/* Styles for the links */
 heder ul li a {
   text-decoration: none;
-  color: #fff; /* White text */
+  color: #fff; 
   font-size: 18px;
   font-weight: 500;
   padding: 8px 12px;
@@ -37,16 +36,15 @@ heder ul li a {
   transition: background-color 0.3s, color 0.3s;
 }
 
-/* Hover effect */
+
 heder ul li a:hover {
   background-color: #d6b7cf;
-  color: #f4f4f4; /* Dark text for contrast */
+  color: #f4f4f4;
 }
 
-/* Current page styling */
 heder ul li a.current {
   background-color: #d6b7cf;
-  color: #f4f4f4; /* Dark text for contrast */
+  color: #f4f4f4;
   font-weight: bold;
 }
 
