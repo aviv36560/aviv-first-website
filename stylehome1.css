@@ -1,10 +1,55 @@
-* {
-  background-color: rgb(218, 212, 205);
-}
 body {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0;
 }
+heder {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #6c4f5b; /* Dark background */
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles for the unordered list */
+heder ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+/* Styles for each list item */
+heder ul li {
+  margin: 0 15px;
+}
+
+/* Styles for the links */
+heder ul li a {
+  text-decoration: none;
+  color: #fff; /* White text */
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hover effect */
+heder ul li a:hover {
+  background-color: #d6b7cf;
+  color: #f4f4f4; /* Dark text for contrast */
+}
+
+/* Current page styling */
+heder ul li a.current {
+  background-color: #d6b7cf;
+  color: #f4f4f4; /* Dark text for contrast */
+  font-weight: bold;
+}
+
 .mom-title {
   color: rgb(186, 31, 114);
   background-color: rgb(214, 183, 207);
@@ -21,7 +66,7 @@ body {
 .flex-container {
   display: flex;
   flex-direction: column;
-  width: 870px;
+  width: 70%;
 }
 .imagfc {
   width: 18px;
@@ -35,4 +80,14 @@ body {
   box-shadow: 4px 4px 8px 0px #b7abab;
   padding: 30px;
   margin-bottom: 20px;
+}
+.table {
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 4px 4px 8px 0px #b7abab;
+}
+.contact {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
 }
