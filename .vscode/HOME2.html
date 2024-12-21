@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>hellow aviv</h1>
+    <script>
+      /// PART A
+      /// task 1
+      let person = {
+        name: "aviv",
+        age: 26,
+        isstudent: true,
+      };
+      console.log(person);
+
+      /// task 2
+      console.log(person.name);
+      console.log(person.age);
+      console.log(person["isstudent"]);
+
+      /// task3
+      person.age = 27;
+      person.hobby = "shoping";
+      console.log(person);
+
+      /// task4
+      let movie = {
+        title: "pretty woman",
+        gener: "romantic",
+      };
+
+      movie.releaseYear = 1990;
+      movie.ispopulr = true;
+      movie.gener = "comedy and romantic";
+      console.log(movie);
+
+      ///task 5
+      let car = {
+        make: "skoda",
+        Model: "octavya",
+        year: 2018,
+        color: "grey",
+      };
+
+      for (let key in car) {
+        console.log(key, car[key]); //יכולה להשתש בלוג רק במשתנה אחד בגלל זה דרך המפתח הוצאנו גם את הערכים
+      }
+
+      /// task 6:
+      let oneperson = {
+        name_oneperson: "Avi",
+        addres_oneperson: "puria",
+        numberofkids_oneperson: 5,
+        numberofdogs_oneperson: 3,
+      };
+
+      let secondperson = {
+        name_secondperson: "nadav",
+        addres_secondperson: "haifa",
+        numberofkids_secondperson: 2,
+        numberofdogs_secondperson: 1,
+      };
+      let all_the_persons = { oneperson, secondperson };
+      console.log(all_the_persons);
+
+      ///task 7: function that cound the keys in object
+
+      function countProperties(obj) {
+        /// פונקציה שמקבלת ערך של OBJ
+        return Object.keys(obj).length; /// אובגקט קיי מחזיא רת מערך המפתחות והלין סופר את מספר המשתנים במערך
+      }
+
+      console.log(countProperties(person));
+      console.log(countProperties(movie));
+
+      /// task 8:
+      delete person.isstudent;
+      console.log(person);
+
+      /// task 9:
+
+      function hasProperty(obj, prop) {
+        if (prop in obj) return true;
+        else return false;
+      }
+      console.log(hasProperty(car, "make"));
+
+      /// take 10 :
+      function updatePerson(person, key, value) {
+        if (key in person) person[key] = value;
+        else person[key] = value;
+        ///הערות לעצמי:
+        ///שימוש בסוגריים מרובעים ([]) מאפשר להוסיף מפתח חדש לאובייקט באותו אופן שבו מעדכנים ערך למפתח קיים. אין צורך במנגנון נפרד להוספה או לעדכון.
+        /// מתי משתמשים בסוגריים מרובעים ([]):
+        ///כששם המפתח אינו ידוע מראש והוא משתנה או מועבר כפרמטר
+        return person;
+      }
+
+      console.log(updatePerson(person, "age", "60"));
+      console.log(updatePerson(person, "city", "Tel Aviv"));
+
+      /// PART B
+      /// task1
+      let fruits = ["aple", "oreng", "cherry", "watermelon", "strawberry"];
+      console.log(fruits);
+
+      /// task 2
+      console.log(fruits[0], fruits[4]);
+      console.log(fruits[2]);
+
+      /// task3:
+      fruits.push("banna");
+      console.log(fruits);
+      fruits.unshift("clementine"); /// בעזרת הפונקציה הזו מכניסה לתחילת הרשימה
+      console.log(fruits);
+      fruits.pop(fruits[5]);
+      console.log(fruits);
+
+      /// task 4:
+
+      for (let i = 0; i < fruits.length; i++) {
+        console.log(fruits[i]);
+      }
+      for (let fruit of fruits) {
+        console.log(fruit);
+      }
+
+      ///task5:
+
+      console.log(fruits.length);
+
+      ///task6:
+      function isInArray(array, element) {
+        if (array.includes(element)) return true;
+        else return fals;
+      }
+      console.log(isInArray(fruits, "aple"));
+
+      /// task 7:
+      console.log(fruits.sort()); ///סטור מסדרכ לפי סדרהאלפה בתי
+
+      ///task 8:
+      console.log(fruits.reverse()); /// סדר הפוך במערך
+
+      /// task 9 :
+      let numbers = [];
+      for (let i = 0; i < 10; i++) {
+        let randomNumber = Math.floor(Math.random() * 100);
+        numbers.push(randomNumber);
+      }
+
+      function filterEvenNumbers(array) {
+        const evenNumbers = array.filter((num) => num % 2 === 0);
+        console.log(evenNumbers);
+      }
+
+      filterEvenNumbers(numbers);
+      ///task 10:
+      let vegetables = ["carrot", "broccoli", "spinach"];
+      let groceries = fruits.concat(vegetables);
+      console.log(groceries);
+    </script>
+  </body>
+</html>
